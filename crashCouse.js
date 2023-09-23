@@ -4,6 +4,6 @@
 // 4. types in js ( primitive and reference )
 //     1. primitives = numbers
 //     2. reference = [ ] ( ) { }
-// 5. 
+// 5. call Back 
 
 var a = 12;
