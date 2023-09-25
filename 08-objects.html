@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-08</title>
+</head>
+<body>
+    <h1>Object Course file</h1>
+
+    <script>
+        const product = {
+            name: 'socks',
+            price: 190,
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product.price = 199);
+
+        const product2 = {
+            name: 'socks',
+            price: 399,
+            'delivery-time': '3 day'
+        }
+
+        console.log(product2['delivery-time']);
+
+        const product3 = {
+            name: 'socks',
+            price: 399,
+            'delivery-time': '3 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            }
+        }
+
+        console.log(product3.rating.count);
+        console.log(product3.rating.stars);
+
+        const product4 = {
+            name: 'socks',
+            price: 399,
+            'delivery-time': '3 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1(){
+                console.log('msg from function inside object');
+            }
+        };
+
+        product4.fun();
+
+    </script>
+</body>
+</html>
