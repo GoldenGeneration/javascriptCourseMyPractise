@@ -13,6 +13,7 @@
     <button onclick="
         callFunction();
         playerMove('rock');
+        finalScore();
         // console.log(callFunction());
         // const callBackValue = callFunction();
         // console.log(callBackValue);
@@ -22,6 +23,7 @@
 
         callFunction();
         playerMove('paper');
+        finalScore();
         // console.log(callFunction());
         // const callBackValue = callFunction();
         // console.log(callBackValue);
@@ -30,47 +32,67 @@
     <button onclick="
         callFunction();
         playerMove('sissor');
+        finalScore();
         // console.log(callFunction());
         // const callBackValue = callFunction();
         // console.log(callBackValue);
     ">Sissor</button>
+
+    <button onclick="
+        win = 0;
+        lose = 0;
+        draw = 0;
+        finalScore();
+    ">Reset</button>
     <script>
         let result = '';
         let gameMove = '';
+        let win = 0;
+        let lose = 0;
+        let draw = 0;
 
         function playerMove(gameMove){
             if (gameMove === 'rock'){
                 if(result === 'rock'){
                     console.log('Computer Played: Rock');
                     console.log('Draw');
+                    draw++;
                 }else if(result ==='paper'){
                     console.log('Computer Played: Paper');
                     console.log('You Lose');
+                    lose++;
                 }else if(result === 'sissor'){
                     console.log('Computer Played: Sissor');
                     console.log('You Win');
+                    win++;
                 }
             }else if (gameMove === 'paper'){
                 if(result === 'rock'){
                     console.log('Computer Played: Rock');
                     console.log('You win');
+                    win++;
                 }else if(result === 'paper'){
                     console.log('Computer Played: Paper');
                     console.log('Draw');
+                    draw++;
                 }else if(result === 'sissor'){
                     console.log('Computer Played: Sissor');
                     console.log('You Lose');
+                    lose++;
                 }
             }else if (gameMove === 'sissor'){
                 if(result === 'rock'){
                     console.log('Computer Played: Rock');
                     console.log('You Lose');
+                    lose++;
                 }else if(result === 'paper'){
                     console.log('Computer Played: Paper');
                     console.log('You Win');
+                    win++;
                 }else if(result === 'sissor'){
                     console.log('Computer Played: Sissor');
                     console.log('Draw');
+                    draw++;
                 }
             }
         }
@@ -85,6 +107,10 @@
             }else if(computerMove >= 2/3 && computerMove < 1){
                 result = 'sissor';
             }
+        }
+
+        function finalScore(){
+            console.log('The final score: ' + '  win: ' + win + '  lose: ' + lose + '  draw: '+draw);
         }
 
     </script>
