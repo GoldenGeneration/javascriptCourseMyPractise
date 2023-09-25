@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sissor</title>
+</head>
+<body>
+
+    <h1>Sissor Paper Rock</h1>
+
+    <button onclick="
+        const computerMove = Math.random();
+
+        if(computerMove >= 0 && computerMove < 1/3){
+            console.log('Computer Played: Rock');
+            console.log('Draw');
+        }
+
+        if(computerMove >= 1/3 && computerMove < 2/3){
+            console.log('Computer Played: Paper ');
+            console.log('You Lose');
+        }
+
+        if(computerMove >= 2/3 && computerMove < 1){
+            console.log('Computer Played: Sissor');
+            console.log('You Win');
+        }
+
+    ">Rock</button>
+
+    <button onclick="
+        const computerMove = Math.random();
+
+        if(computerMove >= 0 && computerMove < 1/3){
+                console.log('Computer Played: Rock');
+                console.log('You Win');
+            }
+
+        if(computerMove >= 1/3 && computerMove < 2/3){
+            console.log('Computer Played: Paper ');
+            console.log('Draw');
+        }
+
+        if(computerMove >= 2/3 && computerMove < 1){
+            console.log('Computer Played: Sissor');
+            console.log('You Lose');
+        }
+    ">Paper</button>
+
+    <button onclick="
+        const computerMove = Math.random();
+
+        if(computerMove >= 0 && computerMove < 1/3){
+                console.log('Computer Played: Rock');
+                console.log('You Lose');
+            }
+
+        if(computerMove >= 1/3 && computerMove < 2/3){
+            console.log('Computer Played: Paper ');
+            console.log('You Win');
+        }
+
+        if(computerMove >= 2/3 && computerMove < 1){
+            console.log('Computer Played: Sissor');
+            console.log('Draw');
+        }
+            ">Sissor</button>
+    <script>
+
+    </script>
+</body>
+</html>
